@@ -1,11 +1,8 @@
 import styled from "styled-components";
 
-export const  Swipper = styled.h1`
-  color: #f24590;
+export const  TextAlt = styled.h1`
+  color: #000000;
   font-family: 'Time New Roman', Times, serif;
-  font-size: 30px;
-  font-weight: 700;
   background: blue;
-  width: 50%;
   text-align: center;
 `
