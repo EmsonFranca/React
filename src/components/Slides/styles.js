@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 900px;
-  /* background: #f5f5f5; */
+  background: ${ (props) => props.color };
   border: solid 4px #000;
   border-radius: 1rem;
   padding: 1rem;
@@ -11,6 +11,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-around;
   text-align: center;
+  width: 80%;
  
 `;
 
@@ -35,14 +36,3 @@ export const  TextAlt = styled.h1`
   background: blue;
   text-align: center;
 `
-export const P = styled.p `
-  font-size: 5rem;
-  font-weight: 700  ;
-`;
-
-export const Button = styled.button`
-  width: 100px;
-  height: 80px;
-  background: #FF0000;
-  text-align: center;
-`;

@@ -1,28 +1,18 @@
 import * as S from "./styles";
-import {} from "./mocks/styles";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { ArrayObjectsImages } from "../ComponentePai/mocks";
-
+// import { ArrayObjectsImages } from "./mocks";
+// import Slides from "../Slides";
+import { useState } from "react";
 export default function ComponentePai() {
+  const [valor, setValor] = useState(10);
+
+  function onMore() {
+    setValor((prevState) => prevState + 1);
+  }
   return (
     <S.Container>
-      <Swiper slidesPerView={1} navigation pagination>
-        {ArrayObjectsImages.map((item) => {
-          return (
-            <SwiperSlide key={item.id}>
-              <S.Title>
-                <h1>{item.textAlt}</h1>
-              </S.Title>
-
-              <S.Image src={item.url} />
-
-              <S.Power>
-                <h2> Power: {item.power} </h2>
-              </S.Power>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+      {/* <Slides ArrayObjectsImages={ArrayObjectsImages} color={"#ff0"} /> */}
+      <S.P>{valor}</S.P>
+      <S.Button onClick={onMore}>Clique aqui para somar 1</S.Button>
     </S.Container>
   );
 }
