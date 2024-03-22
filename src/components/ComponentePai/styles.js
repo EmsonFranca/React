@@ -41,8 +41,7 @@ export const P = styled.p `
 `;
 
 export const Button = styled.button`
-  width: 100px;
-  height: 80px;
+  width: 160px;
   background: #FF0000;
   text-align: center;
 `;
